@@ -9,6 +9,10 @@ import SignUp from './components/SignUp/SignUp'
 import Particles from 'react-particles-js';
 import './App.css';
 
+const littleFeature = {
+  // This is a test. Delete me.
+}
+
 const particlesOptions = {
   particles: {
     number: {
