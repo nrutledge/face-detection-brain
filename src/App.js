@@ -9,6 +9,8 @@ import SignUp from './components/SignUp/SignUp'
 import Particles from 'react-particles-js';
 import './App.css';
 
+// This is a test change.
+
 const particlesOptions = {
   particles: {
     number: {
