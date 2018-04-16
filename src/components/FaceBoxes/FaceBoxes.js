@@ -22,7 +22,7 @@ import React from 'react';
                     color: '#FF0000'
                   }
               }>
-              <div style={{position: 'relative', top: '-50px'}}>{'Age: ' + face.age}</div>
+              <div style={{position: 'relative', top: '-25px'}}>{'Age: ' + face.age}</div>
               </div>
             );
   				})
