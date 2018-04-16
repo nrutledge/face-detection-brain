@@ -12,7 +12,7 @@ import './App.css';
 const particlesOptions = {
   particles: {
     number: {
-      value: 30,
+      value: 40,
       density: {
         enable: true,
         value_area: 800
@@ -84,9 +84,6 @@ class App extends Component {
       }
     });
     this.setState({faceInfo: convertedData});
-    console.log(convertedData);
-    console.log(image.width);
-    console.log(wrapperWidth);
   };
 
   onInputChange = (event) => {
