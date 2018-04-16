@@ -42,6 +42,10 @@ class App extends Component {
     this.state = initialState;
   }
 
+  componentWillMount() {
+      document.title = 'Face Detection Brain'
+  }
+
   componentDidMount() {
     fetch('https://fierce-ravine-76640.herokuapp.com/')
   }
