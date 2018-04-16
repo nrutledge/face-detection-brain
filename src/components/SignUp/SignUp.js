@@ -25,7 +25,7 @@ class SignUp extends React.Component {
 
 	onSubmitSignUp = () => {
 		if (this.state.name && this.state.email && this.state.password ) {
-			fetch('http://localhost:3000/signup', {
+			fetch('https://fierce-ravine-76640.herokuapp.com/signup', {
 				method: 'post',
 				headers: {'Content-Type': 'application/json'},
 				body: JSON.stringify({

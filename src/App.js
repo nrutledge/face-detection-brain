@@ -9,8 +9,6 @@ import SignUp from './components/SignUp/SignUp'
 import Particles from 'react-particles-js';
 import './App.css';
 
-// This is a test change.
-
 const particlesOptions = {
   particles: {
     number: {
@@ -45,7 +43,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/')
+    fetch('https://fierce-ravine-76640.herokuapp.com/')
   }
 
   loadUser = (data) => {
@@ -88,7 +86,7 @@ class App extends Component {
 
   onImageSubmit = () => {
     this.setState({imageURL: this.state.input});
-    fetch('http://localhost:3000/image', {
+    fetch('https://fierce-ravine-76640.herokuapp.com/image', {
       method: 'put',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
