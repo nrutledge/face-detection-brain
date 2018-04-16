@@ -58,15 +58,18 @@ class App extends Component {
 
   convertFaceData = (data) => {
     const regions = data.outputs[0].data.regions;
-    console.log(regions);
+    const image = document.getElementById('image');
+    let wrapperWidth = document.getElementById('image-wrapper').offsetWidth;
 
     const convertedData = regions.map((region) => {
       const age = region.data.face.age_appearance.concepts[0].name;
       const box = region.region_info.bounding_box;
-      const top = (box.top_row * 100) + '%';
-      const right = ((1 - box.right_col) * 100) + '%';
-      const bottom = ((1 - box.bottom_row) * 100) + '%';
-      const left = (box.left_col * 100) + '%';
+      const top = (box.top_row * image.height) + 'px';
+      const right = ((1 - box.right_col) * image.width) + 
+        ((wrapperWidth - image.width) / 2) + 'px';
+      const bottom = ((1 - box.bottom_row) * image.height) + 'px';
+      const left = (box.left_col * image.width) + 
+        ((wrapperWidth - image.width) / 2) + 'px';
       return {
         age: age,
         top: top,
@@ -78,6 +81,8 @@ class App extends Component {
     });
     this.setState({faceInfo: convertedData});
     console.log(convertedData);
+    console.log(image.width);
+    console.log(wrapperWidth);
   };
 
   onInputChange = (event) => {
